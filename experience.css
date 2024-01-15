@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: 'Avenir Black', Avenir, Montserrat;
+  text-align: center;
+  color: white;
+}
+.content {
+  margin: 10% auto;
+  padding: 0;
+  background-color: antiquewhite;
+  border-radius: 10px; /*roundness*/
+  height: 300px;
+  width: 600px;
+  overflow: hidden; /*cut content thats off the page*/
+  box-shadow: 20px hsl(0, 0%, 3%);
+  z-index: -1;
+}
+.show {
+  padding: 10%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  width: fit-content
+}
+.slide_content {
+  float: left;
+  width: 600px;
+  height: 300px;
+}
+.slides {
+  width: 2400px;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state; running:
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide_content:nth-child(1) {
+  /*start at first slide*/
+  background: url('https://i.imgur.com/RFYwafW.png');
+  background-size: 100%;
+  z-index:1;
+}
+.slide_content:nth-child(2) {
+  background: url('https://i.imgur.com/H8JZgIf.jpg');
+  background-size: 100%;
+}
+.slide_content:nth-child(3) {
+  background: rgb(226, 192, 192);
+}
+.slide_content:nth-child(4) {
+  background: rgb(236, 236, 149);
+}
+@keyframes slide {
+  /* controls immediate steps and sequence of animation*/
+  20% {
+    margin-left: 0;
+  }
+  40% {
+    margin-left: calc(-600px * 1);
+  }
+  60% {
+    margin-left: calc(-600px * 2);
+  }
+  80% {
+    margin-left: calc(-600px * 3);
+  }
+}
