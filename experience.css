@@ -1,76 +1,70 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    display: block;
+    text-align: center;
+    color: white;
+    font-family: Avenir Black;
+    letter-spacing: 1.7px;
 }
 body {
-  background-color: black;
-  font-family: 'Avenir Black', Avenir, Montserrat;
-  text-align: center;
-  color: white;
+    background-color: black;
 }
-.content {
-  margin: 10% auto;
-  padding: 0;
-  background-color: antiquewhite;
-  border-radius: 10px; /*roundness*/
-  height: 300px;
-  width: 600px;
-  overflow: hidden; /*cut content thats off the page*/
-  box-shadow: 20px hsl(0, 0%, 3%);
-  z-index: -1;
+
+body {
+    overflow-y: hidden;
 }
-.show {
-  padding: 10%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  font-style: italic;
-  width: fit-content
+.slider {
+    margin: 10% auto;
+    padding: 0;
+    background-color: antiquewhite;
+    border-radius: 10px; /*roundness*/
+    height: 400px;
+    width: 800px;
+    box-shadow: 20px hsl(0, 0%, 3%);
+    z-index: -1;
+    
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: scroll;
 }
-.slide_content {
-  float: left;
-  width: 600px;
-  height: 300px;
+section {
+    min-width: 800px;
+    height: 400px;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+    
+    height: 400px;
+    width: 800px;
 }
-.slides {
-  width: 2400px;
-  -webkit-animation-name: slide;
-  -webkit-animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-play-state; running:
-  display: flex;
-  justify-content: center;
-  align-items: center;
+section:nth-child(1) {
+    background: url('https://i.imgur.com/RFYwafW.png');
+    background-size: 100%;
 }
-.slide_content:nth-child(1) {
-  /*start at first slide*/
-  background: url('https://i.imgur.com/RFYwafW.png');
-  background-size: 100%;
-  z-index:1;
+section:nth-child(2) {
+    background: url('https://i.imgur.com/H8JZgIf.jpg');
+    background-size: 100%;
 }
-.slide_content:nth-child(2) {
-  background: url('https://i.imgur.com/H8JZgIf.jpg');
-  background-size: 100%;
+section:nth-child(3) {
+    background: rgb(226, 192, 192);
 }
-.slide_content:nth-child(3) {
-  background: rgb(226, 192, 192);
+section:nth-child(4) {
+    background: rgb(236, 236, 149);
 }
-.slide_content:nth-child(4) {
-  background: rgb(236, 236, 149);
+section:nth-child(5) {
+    background: rgb(169, 176, 244);
 }
-@keyframes slide {
-  /* controls immediate steps and sequence of animation*/
-  20% {
-    margin-left: 0;
-  }
-  40% {
-    margin-left: calc(-600px * 1);
-  }
-  60% {
-    margin-left: calc(-600px * 2);
-  }
-  80% {
-    margin-left: calc(-600px * 3);
-  }
+
+h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    left: 0;
+    font-size: calc(1rem + 3vw);
 }
