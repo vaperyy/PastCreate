@@ -22,8 +22,7 @@ p {
     color: white;
     font-family: Avenir Light;
     
-    width: 600px;
-    margin: auto;  /*to actually center it */
+
     text-align: center;
     letter-spacing: 1.7px;
 
@@ -40,6 +39,16 @@ p {
     width: 800px;
     box-shadow: 20px hsl(0, 0%, 3%);
     z-index: -1;
+    
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: scroll;
+}
+.slider2 {
+    width: 600px;
+    margin: auto;  /*to actually center it */
+    
+    background-color: black;
     
     scroll-snap-type: x mandatory;
     display: flex;
@@ -71,6 +80,18 @@ section:nth-child(4) {
 }
 section:nth-child(5) {
     background: rgb(169, 176, 244);
+}
+section2 {
+    min-width: 600px;
+    height: 400px;
+    
+    scroll-snap-align: start;
+}
+section2: nth-child(1) {
+    
+}
+section2: nth-child(2) {
+    
 }
 
 h1 {
